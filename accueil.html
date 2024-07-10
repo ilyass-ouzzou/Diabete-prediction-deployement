@@ -1,0 +1,177 @@
+{% load static %}
+<html>
+<head>
+    <title>Accueil - Kare.AI</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .navbar a {
+            color: #0072ff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 25px;
+            transition: background 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background: #e1e1e1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 48px;
+            color: #333;
+        }
+
+        .header p {
+            font-size: 20px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+
+        .feature {
+            width: 30%;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature i {
+            font-size: 50px;
+            color: #0072ff;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .feature p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .dataset-overview {
+            margin-bottom: 40px;
+        }
+
+        .dataset-overview h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .dataset-overview p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="/accueil/">Accueil</a>
+            <a href="/predict/">Predict</a>
+            <a href="/faq/">FAQ</a>
+        </div>
+        <div class="header">
+            <h1>Welcome to Kare.AI</h1>
+            <p>Your tool for diabetes prediction based on diagnostic measurements.</p>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-diagnoses"></i>
+                <h3>Predict Diabetes</h3>
+                <p>Use our model to predict whether a patient has diabetes based on their diagnostic measurements.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-database"></i>
+                <h3>Comprehensive Dataset</h3>
+                <p>Analyze data from the National Institute of Diabetes and Digestive and Kidney Diseases.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-users"></i>
+                <h3>Focused Demographic</h3>
+                <p>Our data focuses on females at least 21 years old of Pima Indian heritage.</p>
+            </div>
+        </div>
+        <div class="dataset-overview">
+            <h2>Dataset Overview</h2>
+            <p>
+                This dataset is originally from the National Institute of Diabetes and Digestive and Kidney Diseases. The objective is to predict based on diagnostic measurements whether a patient has diabetes.
+                Several constraints were placed on the selection of these instances from a larger database. In particular, all patients here are females at least 21 years old of Pima Indian heritage.
+            </p>
+            <p>
+                <strong>Pregnancies:</strong> Number of times pregnant<br>
+                <strong>Glucose:</strong> Plasma glucose concentration a 2 hours in an oral glucose tolerance test<br>
+                <strong>BloodPressure:</strong> Diastolic blood pressure (mm Hg)<br>
+                <strong>SkinThickness:</strong> Triceps skin fold thickness (mm)<br>
+                <strong>Insulin:</strong> 2-Hour serum insulin (mu U/ml)<br>
+                <strong>BMI:</strong> Body mass index (weight in kg/(height in m)^2)<br>
+                <strong>DiabetesPedigreeFunction:</strong> Diabetes pedigree function<br>
+                <strong>Age:</strong> Age (years)<br>
+                <strong>Outcome:</strong> Class variable (0 or 1)
+            </p>
+        </div>
+    </div>
+</body>
+</html>
